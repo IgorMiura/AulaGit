@@ -1,0 +1,42 @@
+# ClickUp Excel Integration Configuration
+# Copy this file to config.yaml and fill in your values
+
+clickup:
+  # Your ClickUp API token (get from https://app.clickup.com/settings/apps)
+  api_token: "YOUR_CLICKUP_API_TOKEN_HERE"
+  
+  # Workspace/Team ID (found in ClickUp URL or via API)
+  team_id: "YOUR_TEAM_ID_HERE"
+  
+  # List ID for "Projetos em andamento" (Projects in Progress)
+  list_id: "YOUR_LIST_ID_HERE"
+  
+  # API base URL (usually doesn't need to change)
+  base_url: "https://api.clickup.com/api/v2"
+
+excel:
+  # Path to your Excel file
+  file_path: "examples/projetos_em_andamento.xlsx"
+  
+  # Worksheet name to sync with
+  worksheet_name: "Projetos"
+  
+  # Starting row for data (skip headers)
+  data_start_row: 2
+
+sync:
+  # Sync direction: "excel_to_clickup", "clickup_to_excel", or "bidirectional"
+  direction: "bidirectional"
+  
+  # How often to sync (in minutes) for automatic sync
+  interval_minutes: 30
+  
+  # Whether to create backup before sync
+  create_backup: true
+
+logging:
+  # Log level: DEBUG, INFO, WARNING, ERROR
+  level: "INFO"
+  
+  # Log file path
+  file_path: "logs/clickup_excel_sync.log"
