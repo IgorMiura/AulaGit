@@ -1,0 +1,42 @@
+# ClickUp Excel Integration Configuration
+# Configuração pré-configurada com suas credenciais
+
+clickup:
+  # Token da API do ClickUp (já configurado)
+  api_token: "pk_55168429_CASI15FLV91IH3FZI06S02Q2YJOLXKRV"
+  
+  # Team/Workspace ID (será detectado automaticamente)
+  team_id: "55168429"
+  
+  # Lista ID para "Projetos em andamento" (já configurado)
+  list_id: "901323402543"
+  
+  # URL base da API ClickUp
+  base_url: "https://api.clickup.com/api/v2"
+
+excel:
+  # Caminho para o arquivo Excel
+  file_path: "examples/projetos_em_andamento.xlsx"
+  
+  # Nome da planilha
+  worksheet_name: "Projetos"
+  
+  # Linha onde começam os dados (linha 2, pois linha 1 são os cabeçalhos)
+  data_start_row: 2
+
+sync:
+  # Direção da sincronização: "excel_to_clickup", "clickup_to_excel", ou "bidirectional"
+  direction: "bidirectional"
+  
+  # Intervalo para sincronização automática (em minutos)
+  interval_minutes: 30
+  
+  # Criar backup antes da sincronização
+  create_backup: true
+
+logging:
+  # Nível de log: DEBUG, INFO, WARNING, ERROR
+  level: "INFO"
+  
+  # Arquivo de log
+  file_path: "logs/clickup_excel_sync.log"

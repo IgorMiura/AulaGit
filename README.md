@@ -29,13 +29,17 @@ cd AulaGit
 pip install -r requirements.txt
 ```
 
-3. Configure suas credenciais:
+3. **✅ Configuração já pronta!** 
+   Suas credenciais do ClickUp já estão configuradas no arquivo `config/config.yaml`:
+   - Token: `pk_55168429_CASI15FLV91IH3FZI06S02Q2YJOLXKRV`
+   - Lista ID: `901323402543` (Projetos em andamento)
+
+4. Execute o script de inicialização rápida:
 ```bash
-cp config/config.yaml.example config/config.yaml
-# Edite config/config.yaml com suas informações do ClickUp
+python quick_start.py
 ```
 
-4. Execute a sincronização:
+5. Ou execute diretamente a sincronização:
 ```bash
 python clickup_excel_sync.py sync
 ```
@@ -65,4 +69,3 @@ Este projeto foi desenvolvido para facilitar a integração entre ClickUp e Exce
 ## 📄 Licença
 
 Este projeto é de código aberto e está disponível sob a licença MIT.
-
