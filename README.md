@@ -1,62 +1,71 @@
-# 📊 ClickUp Excel Integration
+# ClickUp Excel Integration
 
-Este repositório contém código Power Query/M para integração entre ClickUp API e Excel/Power BI.
+Uma integração poderosa entre ClickUp e Excel para sincronizar projetos em andamento.
 
-## 🚀 Funcionalidades
+## 📋 Descrição
 
-- **Busca paginada** de tarefas da API do ClickUp
-- **Organização hierárquica** automática (tarefas pai → filhos → netos)
-- **Tratamento de erros** robusto
-- **Informações de debug** para monitoramento
-- **Configuração flexível** via parâmetros
+Este projeto permite sincronizar dados entre planilhas Excel e listas do ClickUp, especificamente focado na lista "Projetos em andamento". A integração suporta sincronização bidirecional, permitindo que mudanças feitas no Excel sejam refletidas no ClickUp e vice-versa.
 
-## 📁 Arquivos
+## ✨ Funcionalidades
 
-- `clickup-excel-integration.m` - Código original
-- `clickup-excel-integration-improved.m` - Versão melhorada com tratamento de erros
-- `DEBUGGING_GUIDE.md` - Guia completo de depuração e solução de problemas
+- 🔄 Sincronização bidirecional entre Excel e ClickUp
+- 📊 Mapeamento flexível de campos entre planilha e tarefas
+- 🔐 Autenticação segura com API do ClickUp
+- 📝 Logs detalhados para auditoria e troubleshooting
+- ⚙️ Interface de linha de comando fácil de usar
+- 🛡️ Tratamento robusto de erros e conflitos
+- 💾 Sistema de backup automático
 
-## 🔧 Como Usar
+## 🚀 Instalação Rápida
 
-### Versão Básica
-```m
-// Cole o código do arquivo clickup-excel-integration.m no Power Query Editor
+1. Clone o repositório:
+```bash
+git clone https://github.com/IgorMiura/AulaGit.git
+cd AulaGit
 ```
 
-### Versão Melhorada (Recomendada)
-```m
-// Cole o código do arquivo clickup-excel-integration-improved.m
-// Pode ser usado com parâmetros:
-
-// Usar configurações padrão
-MinhaFuncao()
-
-// Ou com parâmetros personalizados
-MinhaFuncao("seu_token_aqui", "sua_lista_id", 100)
+2. Instale as dependências:
+```bash
+pip install -r requirements.txt
 ```
 
-## ⚙️ Configuração
+3. **✅ Configuração já pronta!** 
+   Suas credenciais do ClickUp já estão configuradas no arquivo `config/config.yaml`:
+   - Token: `pk_55168429_CASI15FLV91IH3FZI06S02Q2YJOLXKRV`
+   - Lista ID: `901323402543` (Projetos em andamento)
 
-1. **Token do ClickUp**: Obtenha em Settings → Apps → API
-2. **List ID**: Encontre na URL da lista no ClickUp
-3. **Max Pages**: Limite de páginas para evitar timeouts (padrão: 50)
+4. Execute o script de inicialização rápida:
+```bash
+python quick_start.py
+```
 
-## 📈 Resultado
+5. Ou execute diretamente a sincronização:
+```bash
+python clickup_excel_sync.py sync
+```
 
-A função retorna uma tabela Excel com:
-- Todas as tarefas organizadas hierarquicamente
-- Coluna `Task_Level` com níveis de indentação
-- Coluna `Parent_Task_Name` com nome da tarefa pai
-- Informações de debug (versão melhorada)
+## 📖 Documentação
 
-## 🐛 Solução de Problemas
+- [Guia de Configuração](docs/setup_guide.md)
+- [Exemplos de Uso](docs/usage_examples.md)
+- [Solução de Problemas](docs/troubleshooting.md)
+- [Pesquisa da API ClickUp](docs/clickup_api_research.md)
 
-Consulte o arquivo `DEBUGGING_GUIDE.md` para:
-- Problemas comuns e soluções
-- Melhorias sugeridas
-- Testes recomendados
-- Monitoramento e alertas
+## 🏗️ Estrutura do Projeto
 
-## 👨‍💻 Autor
+```
+├── src/                    # Código fonte principal
+├── config/                 # Arquivos de configuração
+├── docs/                   # Documentação
+├── examples/               # Exemplos e templates
+├── tests/                  # Testes automatizados
+└── logs/                   # Arquivos de log
+```
 
-Igor Miura - Integração ClickUp para Excel/Power BI
+## 🤝 Contribuição
+
+Este projeto foi desenvolvido para facilitar a integração entre ClickUp e Excel. Para sugestões ou melhorias, abra uma issue ou pull request.
+
+## 📄 Licença
+
+Este projeto é de código aberto e está disponível sob a licença MIT.
